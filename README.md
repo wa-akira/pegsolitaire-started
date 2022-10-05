@@ -1,3 +1,3 @@
 # pegsolitaire-started
 
-https://wa-aakira.github.io/pegsolitaire-started/
+https://wa-akira.github.io/pegsolitaire-started/

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<!--Copyright (c)  2016 ask5
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php  -->
+
+<head>
+    <meta charset="utf-8">
+    <title>PegSolitaire</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/main.min.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>PegSolitaire Problems＆Answers pegsolitaire-Started</h1>
+        <div class="menu">
+            <select id="patterns" onchange="change_pattern();"></select>
+            <span class="item" id="start_timer" onclick="start_timer();">start timer</span> |
+            <span class="item" id="stop_timer" onclick="stop_timer();">stop timer</span> |
+            <span class="item disabled" id="undo" onclick="undo();">undo</span> |
+            <span class="item" id="reset" onclick="reset();">reset</span> |
+            <span class="item" id="replay" onclick="replay();">replay</span> | 
+            <span class="item" onclick="show_rules();">rules</span> |
+            
+            <span class="item" onclick="show_answers();">answers</span> |            
+           
+            <span class="item" id="timer"></span>
+        </div>
+        <div id="main-section" >
+            <div id="board-container"></div>
+            <div id="rules" class="hide" onclick="hide_rules();">
+                <span onclick="hide_rules();">X</span>
+                <p>
+                    <h2>Rules</h2>
+                    For information visit <a href="https://en.wikipedia.org/wiki/Peg_solitaire" target="_blank">this wiki page</a>.
+                </p>
+                <img src="5-1.png" alt="" width="250px"height="250px">
+                <img src="to.png" alt="" width="250px"height="250px">
+                <ol>
+                    How to use the problem collection
+                    How to play the game 
+                    Please open the number (5-1) from the problem 
+                    
+                    <li>Jump over the peg at position 36 to position 34 and move. </li>
+                    <li>Remove the peg at position 35. If you jump over, you can remove the peg.</li>
+                    <li>Move the pug at position 44 to position 24. </li>
+                    <li> Remove the peg at position 34. </li>
+                    <li>Move the peg at position 32 to position 34, move the peg at position 24 to position 44 ... </li>
+                    <li>                       
+                        Only one peg remained at the 44 position in the center. 
+                       The peg can only be moved up, down, left and right. Cannot move diagonally                       
+                   </li>
+                   <li>★　★★　　★★★
+                    Difficult 　problems are starred and these problems have answers </li>
+                    <li>For all issues, there is only one peg left on the board at the end of the game</li>
+                    <li>one of which is always in the 44th position in the center</li>
+                    <li> Problems 12-8, 13-11, 14-18, 18-4, 20-3 This is a particularly difficult problems, so I posted multiple answers.</li>
+                   <li style="list-style:non">                   
+                    I love peg solitaire
+                    Take on the challenge 
+                    Have a lot of fun
+                    </li>
+
+                </ol>
+            </div> 
+            <div id="board-container"></div>
+
+            <div id="answers" class="hide" onclick="hide_answers();">
+                <span onclick="hide_answers();">X</span>
+                <ul >
+                   <li style="list-style: none">Ansers</li> 
+                   <li style="list-style: none">                    
+                       *  **  *** A guideline for difficulty There is an answer because it is a difficult problem</li>
+                    <li>For all issues, there is only one peg left on the board at the end of the game</li>
+                    <li>one of which is always in the 44th position in the center</li>
+                    <li> Problems 12-8, 13-11, 14-18, 18-4, 20-3 This is a particularly difficult problems, so I posted multiple answers.</li>
+                   <li style="list-style: non">                   
+                    I love peg solitaire
+                    Take on the challenge 
+                    Have a lot of fun
+                    </li> 
+                    <li style="list-style:none"></li>
+
+            <li>7-1 = 44to24; 33to53; 41to43; 53to33; 32to34; 24to44</li>
+            <li>7-2 = 33to53; 34to54; 53to55; 55to35; 36to34; 24to44</li>
+            <li>7-5 = 44to64; 52to54; 64to44; 44to42; 23to43; 42to44</li>
+            <li>7-10 = 54to56; 35to55; 74to54; 44to64; 56to54; 64to44</li>
+            <li>7-11 = 23to43; 44to42; 35to33; 25to23; 23to43; 42to44</li>
+            <li>7-12 = 35to33; 54to34; 34to32; 53to33; 32to34; 24to44</li>
+            <li>7-13 = 33to53; 53to55; 55to35; 35to33; 23to43; 42to44</li>
+            <li>7-17 = 31to33; 42to43; 34to32; 53to33; 32to34; 24to44</li>
+           
+
+
+
+            </ul>
+            </div>
+        </div>
+        <div id="info-section">
+            <div id="log-container">
+                <ol id="log">
+                </ol>
+            </div>
+        </div>
+    </div>
+    <script src="dist/solitaire.js"></script>
+</body>
+
+</html>
